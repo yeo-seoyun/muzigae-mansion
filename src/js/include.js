@@ -3,7 +3,7 @@ fetch("/src/components/Header.html")
   .then((data) => {
     const header = document.querySelector("header");
     header.innerHTML = data;
-    // return import("/src/js/header.js");
+    return import("/src/js/header.js");
   })
   .catch((error) => {
     console.error(error);

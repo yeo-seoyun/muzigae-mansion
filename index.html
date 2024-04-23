@@ -6,46 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>muzigae-mansion</title>
     <link rel="stylesheet" href="/src/styles/normalize.css" />
-    <script type="module" src="/src/js/include.js"></script>
-    <script type="module" src="/src/js/swiper.js"></script>
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
-    <!-- <script type="module" src="/main.js"></script> -->
+    <script type="module" src="/src/js/include.js"></script>
+    <script type="module" src="/src/js/swiper.js"></script>
+    <script type="module" src="/main.js"></script>
   </head>
   <body>
-    <!-- <div id="app"></div> -->
     <header id="header"></header>
 
     <section class="w-full">
       <article class="w-full h-screen">
-        <!-- Swiper -->
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
-            <!-- Slides -->
             <div class="swiper-slide">
               <p
-                class="bg-main-slide-1 bg-no-repeat bg-cover bg-center w-full h-screen"
+                class="w-full h-screen bg-main-slide-1 sm:bg-main-slide-sm1 md:bg-main-slide-sm1 bg-no-repeat bg-cover bg-center"
               ></p>
             </div>
             <div class="swiper-slide">
               <p
-                class="bg-main-slide-2 bg-no-repeat bg-cover bg-center w-full h-screen"
+                class="w-full h-screen bg-main-slide-2 sm:bg-main-slide-sm2 md:bg-main-slide-sm2 bg-no-repeat bg-cover bg-center"
               ></p>
             </div>
             <div class="swiper-slide">
               <p
-                class="bg-main-slide-3 bg-no-repeat bg-cover bg-center w-full h-screen"
+                class="w-full h-screen bg-main-slide-3 sm:bg-main-slide-sm3 md:bg-main-slide-sm3 bg-no-repeat bg-cover bg-center"
               ></p>
             </div>
-            <!-- ... -->
           </div>
-          <!-- <div class="swiper-pagination"></div> -->
-          <div class="swiper-button-prev text-black"></div>
-          <div class="swiper-button-next text-black"></div>
+          <div class="swiper-button-prev text-black-100 sm:hidden"></div>
+          <div class="swiper-button-next text-black-100 sm:hidden"></div>
           <div class="swiper-scrollbar"></div>
         </div>
+      </article>
+      <article>
+        <h2>COLLECTION</h2>
       </article>
     </section>
   </body>

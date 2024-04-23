@@ -3,6 +3,7 @@ import "swiper/css/bundle";
 
 const mySwiper = new Swiper(".mySwiper", {
   loop: true,
+  effect: "fade",
   pagination: {
     el: ".swiper-pagination",
   },
