@@ -7,14 +7,46 @@
     <title>muzigae-mansion</title>
     <link rel="stylesheet" href="/src/styles/normalize.css" />
     <script type="module" src="/src/js/include.js"></script>
+    <script type="module" src="/src/js/swiper.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <!-- <script type="module" src="/main.js"></script> -->
   </head>
   <body>
     <!-- <div id="app"></div> -->
     <header id="header"></header>
 
-    <section class="bg-pink-300 w-full pt-16">
-      <article class="">HOME 홈dd!</article>
+    <section class="w-full">
+      <article class="w-full h-screen">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <p
+                class="bg-main-slide-1 bg-no-repeat bg-cover bg-center w-full h-screen"
+              ></p>
+            </div>
+            <div class="swiper-slide">
+              <p
+                class="bg-main-slide-2 bg-no-repeat bg-cover bg-center w-full h-screen"
+              ></p>
+            </div>
+            <div class="swiper-slide">
+              <p
+                class="bg-main-slide-3 bg-no-repeat bg-cover bg-center w-full h-screen"
+              ></p>
+            </div>
+            <!-- ... -->
+          </div>
+          <!-- <div class="swiper-pagination"></div> -->
+          <div class="swiper-button-prev text-black"></div>
+          <div class="swiper-button-next text-black"></div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </article>
     </section>
   </body>
 </html>
