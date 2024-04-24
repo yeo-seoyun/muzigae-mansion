@@ -13,12 +13,14 @@
     <script type="module" src="/src/js/include.js"></script>
     <script type="module" src="/src/js/swiper.js"></script>
     <script type="module" src="/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
   </head>
   <body>
     <header id="header"></header>
 
     <section class="w-full">
-      <article class="w-full h-screen">
+      <article class="main w-full h-screen">
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -42,9 +44,46 @@
           <div class="swiper-scrollbar"></div>
         </div>
       </article>
-      <article>
-        <h2>COLLECTION</h2>
+      <article
+        class="collection w-full h-screen md:h-[50vh] sm:h-[50vh] flex flex-col items-center justify-center gap-28 md:gap-20 sm:gap-10"
+      >
+        <h2 class="text-3xl">COLLECTION</h2>
+        <div class="swiper mySwiper-2 w-full">
+          <div class="swiper-wrapper">
+            <!-- 이미지 데이터 불러오기 -->
+          </div>
+
+          <div class="swiper-button-prev text-black-100 sm:hidden"></div>
+          <div class="swiper-button-next text-black-100 sm:hidden"></div>
+        </div>
       </article>
+      <article class="w-full h-screen md:h-[50vh] sm:h-[30vh]">
+        <div
+          class="bg-script bg-auto md:bg-cover sm:bg-cover bg-center bg-no-repeat w-full h-full"
+        ></div>
+      </article>
+      <article
+        class="w-full h-screen md:h-[50vh] sm:h-[60vh] flex flex-col items-center justify-center gap-28 md:gap-20 sm:gap-10"
+      >
+        <h2 class="text-3xl">BEST ITEM</h2>
+        <div class="swiper bestItem w-[90%]">
+          <div class="swiper-wrapper"></div>
+
+          <div class="swiper-button-prev text-black-100 sm:hidden"></div>
+          <div class="swiper-button-next text-black-100 sm:hidden"></div>
+        </div>
+        <div>
+          <button
+            type="button"
+            class="bg-black-100 text-white text-sm py-2 px-3 rounded-full"
+          >
+            SHOP ALL
+          </button>
+        </div>
+      </article>
+      <article
+        class="w-full h-screen md:h-[50vh] sm:h-[60vh] flex flex-col items-center justify-center gap-28 md:gap-20 sm:gap-10"
+      ></article>
     </section>
   </body>
 </html>

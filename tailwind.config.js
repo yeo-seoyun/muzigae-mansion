@@ -36,6 +36,7 @@ export default {
         "url('/src/assets/e0b5a9a4f135403cbb0cda05a1782aee.jpg')",
       "main-slide-sm3":
         "url('/src/assets/f497598c4bc4ee922ac055ea7d317e55.jpg')",
+      script: "url('/src/assets/cm_sub_brand_img_1.jpg')",
     },
   },
   plugins: [],

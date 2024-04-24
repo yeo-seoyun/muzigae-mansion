@@ -9,9 +9,9 @@ fetch("/src/components/Header.html")
     console.error(error);
   });
 
-fetch("/src/components/footer.html")
-  .then((res) => res.text())
-  .then((data) => {
-    const footer = document.querySelector("footer");
-    footer.innerHTML = data;
-  });
+// fetch("/src/components/footer.html")
+//   .then((res) => res.text())
+//   .then((data) => {
+//     const footer = document.querySelector("footer");
+//     footer.innerHTML = data;
+//   });
