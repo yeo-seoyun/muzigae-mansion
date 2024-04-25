@@ -37,6 +37,9 @@ export default {
       "main-slide-sm3":
         "url('/src/assets/f497598c4bc4ee922ac055ea7d317e55.jpg')",
       script: "url('/src/assets/cm_sub_brand_img_1.jpg')",
+      "membership-1": "url('/src/assets/cm_main_member_benefit_icon_1.png')",
+      "membership-2": "url('/src/assets/cm_main_member_benefit_icon_2.png')",
+      "membership-3": "url('/src/assets/cm_main_member_benefit_icon_3.png')",
     },
   },
   plugins: [],

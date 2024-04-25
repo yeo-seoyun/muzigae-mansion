@@ -84,17 +84,15 @@ async function loadBestItems() {
       .map(
         (item) => `
       <div class="swiper-slide">
-        <a href="" class="item-card w-full flex flex-col items-center">
-          <img src="${getPbImage(
-            item.collectionId,
-            item.id,
-            item.photo
-          )}" alt="${item.title}" class="w-full hover:scale-110" />
-          <div class="w-full flex gap-2 justify-between">
-            <h3 class="flex-1">${item.title}</h3>
-            <span>${comma(item.price)}원</span>
-          </div>
-        </a>
+      <a href="#" class="item-card w-full flex flex-col items-center">
+      <img src="${getPbImage(item.collectionId, item.id, item.photo)}" alt="${
+          item.title
+        }" class="w-full" />
+      <div class="w-full flex gap-2 justify-between">
+        <h3 class="flex-1">${item.title}</h3>
+        <span>${comma(item.price)}원</span>
+      </div>
+    </a>
       </div>
     `
       )
