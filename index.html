@@ -20,264 +20,263 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
   </head>
   <body>
-    <div class="content-wrapper">
-      <header
-        id="header"
-        class="fixed top-0 z-40 w-full h-16 flex items-center px-20 sm:px-4 md:px-4 text-sm"
+    <header
+      id="header"
+      class="fixed top-0 z-40 w-full h-16 flex items-center px-20 sm:px-4 md:px-4 text-sm"
+    >
+      <button
+        type="button"
+        id="menu-open"
+        class="flex flex-1 justify-start lg:hidden"
       >
-        <button
-          type="button"
-          id="menu-open"
-          class="flex flex-1 justify-start lg:hidden"
-        >
-          <span class="material-symbols-outlined"> menu </span>
-        </button>
+        <span class="material-symbols-outlined"> menu </span>
+      </button>
+      <div
+        id="category-modal"
+        class="fixed top-0 left-0 w-[70%] h-screen bg-white p-6 z-50"
+      >
+        <div class="flex flex-col items-center m-auto w-full h-full">
+          <button type="button" id="menu-close" class="self-end">
+            <span class="material-symbols-outlined"> close </span>
+          </button>
+          <nav
+            class="flex flex-col items-center justify-center w-full h-full text-3xl space-y-8 sm:text-xl sm:space-y-5"
+          >
+            <a href="#">BRAND</a>
+            <a href="#">COLLECTION</a>
+            <a href="#">SHOP</a>
+            <a href="#">MEMBERSHIP</a>
+            <a href="#">COMMUNITY</a>
+          </nav>
+        </div>
+      </div>
+
+      <nav class="flex flex-1 justify-start gap-2 sm:hidden md:hidden">
+        <a href="">BRAND</a>
+        <a href="">COLLECTION</a>
+        <a href="">SHOP</a>
+        <a href="">MEMBERSHIP</a>
+        <a href="">COMMUNITY</a>
+      </nav>
+      <div class="flex flex-1 justify-center">
+        <p
+          class="logo bg-mm-logo sm:bg-mm-logo-black md:bg-mm-logo-black bg-contain bg-no-repeat w-28 h-12"
+        ></p>
+      </div>
+      <div class="flex flex-1 justify-end items-center gap-4">
+        <div class="flex gap-1 sm:hidden md:hidden">
+          <a href="">Login</a>
+          <span>/</span>
+          <a href="">Join</a>
+        </div>
+        <div class="flex gap-1">
+          <button type="button">
+            <span class="material-symbols-outlined">search</span>
+          </button>
+          <button type="button" class="sm:hidden md:hidden">
+            <span class="material-symbols-outlined">favorite</span>
+          </button>
+          <button type="button">
+            <span class="material-symbols-outlined">shopping_cart</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="w-full">
+      <!-- main -->
+      <article class="main w-full h-screen">
+        <div class="swiper main-Swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <p
+                class="w-full h-screen bg-main-slide-1 sm:bg-main-slide-sm1 md:bg-main-slide-sm1 bg-no-repeat bg-cover bg-center"
+              ></p>
+            </div>
+            <div class="swiper-slide">
+              <p
+                class="w-full h-screen bg-main-slide-2 sm:bg-main-slide-sm2 md:bg-main-slide-sm2 bg-no-repeat bg-cover bg-center"
+              ></p>
+            </div>
+            <div class="swiper-slide">
+              <p
+                class="w-full h-screen bg-main-slide-3 sm:bg-main-slide-sm3 md:bg-main-slide-sm3 bg-no-repeat bg-cover bg-center"
+              ></p>
+            </div>
+          </div>
+          <div class="sm:hidden">
+            <div class="swiper-button-prev after:text-black-100"></div>
+            <div class="swiper-button-next after:text-black-100"></div>
+          </div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </article>
+
+      <!-- collection -->
+      <article
+        class="collection w-full h-screen md:h-[70vh] sm:h-screen flex flex-col items-center justify-center gap-28 md:gap-20 sm:gap-10"
+      >
+        <h2 class="text-3xl">COLLECTION</h2>
+        <div class="swiper collection-Swiper w-full">
+          <div class="swiper-wrapper">
+            <!-- 이미지 데이터 불러오기 -->
+          </div>
+
+          <div class="sm:hidden">
+            <div class="swiper-button-prev after:text-black-100"></div>
+            <div class="swiper-button-next after:text-black-100"></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="w-full h-screen md:h-[50vh] sm:h-[40vh]">
         <div
-          id="category-modal"
-          class="fixed top-0 left-0 w-[70%] h-screen bg-white p-6 z-50"
-        >
-          <div class="flex flex-col items-center m-auto w-full h-full">
-            <button type="button" id="menu-close" class="self-end">
-              <span class="material-symbols-outlined"> close </span>
-            </button>
-            <nav
-              class="flex flex-col items-center justify-center w-full h-full text-3xl space-y-8 sm:text-xl sm:space-y-5"
-            >
-              <a href="#">BRAND</a>
-              <a href="#">COLLECTION</a>
-              <a href="#">SHOP</a>
-              <a href="#">MEMBERSHIP</a>
-              <a href="#">COMMUNITY</a>
-            </nav>
+          class="bg-script bg-cover md:bg-cover sm:bg-cover bg-center bg-no-repeat w-full h-full"
+        ></div>
+      </article>
+
+      <!-- best item -->
+      <article
+        id="best-item"
+        class="w-full h-screen md:h-[60vh] sm:h-[70vh] flex flex-col items-center justify-center gap-20 md:gap-20 sm:gap-4"
+      >
+        <h2 class="text-3xl">BEST ITEM</h2>
+        <div class="swiper bestItem-Swiper w-[90%]">
+          <div class="swiper-wrapper"></div>
+
+          <div class="sm:hidden">
+            <div class="swiper-button-prev after:text-black-100"></div>
+            <div class="swiper-button-next after:text-black-100"></div>
           </div>
         </div>
-
-        <nav class="flex flex-1 justify-start gap-2 sm:hidden md:hidden">
-          <a href="">BRAND</a>
-          <a href="">COLLECTION</a>
-          <a href="">SHOP</a>
-          <a href="">MEMBERSHIP</a>
-          <a href="">COMMUNITY</a>
-        </nav>
-        <div class="flex flex-1 justify-center">
-          <p
-            class="logo bg-mm-logo sm:bg-mm-logo-black md:bg-mm-logo-black bg-contain bg-no-repeat w-28 h-12"
-          ></p>
+        <div>
+          <button
+            type="button"
+            class="bg-black-100 text-white text-sm py-2 px-3 rounded-full"
+          >
+            SHOP ALL
+          </button>
         </div>
-        <div class="flex flex-1 justify-end items-center gap-4">
-          <div class="flex gap-1 sm:hidden md:hidden">
-            <a href="">Login</a>
-            <span>/</span>
-            <a href="">Join</a>
-          </div>
-          <div class="flex gap-1">
-            <button type="button">
-              <span class="material-symbols-outlined">search</span>
-            </button>
-            <button type="button" class="sm:hidden md:hidden">
-              <span class="material-symbols-outlined">favorite</span>
-            </button>
-            <button type="button">
-              <span class="material-symbols-outlined">shopping_cart</span>
-            </button>
-          </div>
-        </div>
-      </header>
+      </article>
 
-      <section class="w-full">
-        <!-- main -->
-        <article class="main w-full h-screen">
-          <div class="swiper main-Swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <p
-                  class="w-full h-screen bg-main-slide-1 sm:bg-main-slide-sm1 md:bg-main-slide-sm1 bg-no-repeat bg-cover bg-center"
-                ></p>
-              </div>
-              <div class="swiper-slide">
-                <p
-                  class="w-full h-screen bg-main-slide-2 sm:bg-main-slide-sm2 md:bg-main-slide-sm2 bg-no-repeat bg-cover bg-center"
-                ></p>
-              </div>
-              <div class="swiper-slide">
-                <p
-                  class="w-full h-screen bg-main-slide-3 sm:bg-main-slide-sm3 md:bg-main-slide-sm3 bg-no-repeat bg-cover bg-center"
-                ></p>
-              </div>
-            </div>
-            <div class="sm:hidden">
-              <div class="swiper-button-prev after:text-black-100"></div>
-              <div class="swiper-button-next after:text-black-100"></div>
-            </div>
-            <div class="swiper-scrollbar"></div>
-          </div>
-        </article>
-
-        <!-- collection -->
-        <article
-          class="collection w-full h-screen md:h-[70vh] sm:h-screen flex flex-col items-center justify-center gap-28 md:gap-20 sm:gap-10"
+      <!-- membership -->
+      <article
+        class="w-full h-[50vh] md:h-[30vh] sm:h-[50vh] bg-gray-300 flex flex-col items-center justify-center gap-28 md:gap-20 sm:gap-10"
+      >
+        <div
+          class="w-[85%] md:w-[90%] sm:w-[90%] h-full flex sm:flex-col sm:gap-2 sm:justify-center justify-between items-center"
         >
-          <h2 class="text-3xl">COLLECTION</h2>
-          <div class="swiper collection-Swiper w-full">
-            <div class="swiper-wrapper">
-              <!-- 이미지 데이터 불러오기 -->
+          <div class="flex flex-col items-start sm:items-center gap-7">
+            <div class="sm:text-center">
+              <h2 class="text-3xl sm:text-xl">MEMBERSHIP BENEFITS</h2>
+              <p class="text-sm sm:text-xs">
+                무지개 맨션의 고객이 되어 회원 전용 혜택을 받아보세요.
+              </p>
             </div>
-
-            <div class="sm:hidden">
-              <div class="swiper-button-prev after:text-black-100"></div>
-              <div class="swiper-button-next after:text-black-100"></div>
-            </div>
-          </div>
-        </article>
-
-        <article class="w-full h-screen md:h-[50vh] sm:h-[40vh]">
-          <div
-            class="bg-script bg-cover md:bg-cover sm:bg-cover bg-center bg-no-repeat w-full h-full"
-          ></div>
-        </article>
-
-        <!-- best item -->
-        <article
-          class="w-full h-screen md:h-[60vh] sm:h-[70vh] flex flex-col items-center justify-center gap-20 md:gap-20 sm:gap-4"
-        >
-          <h2 class="text-3xl">BEST ITEM</h2>
-          <div class="swiper bestItem-Swiper w-[90%]">
-            <div class="swiper-wrapper"></div>
-
-            <div class="sm:hidden">
-              <div class="swiper-button-prev after:text-black-100"></div>
-              <div class="swiper-button-next after:text-black-100"></div>
-            </div>
-          </div>
-          <div>
             <button
               type="button"
-              class="bg-black-100 text-white text-sm py-2 px-3 rounded-full"
+              class="p-3 text-white text-sm sm:text-xs bg-black-100 rounded-full"
             >
-              SHOP ALL
+              DETAIL VIEW
             </button>
           </div>
-        </article>
-
-        <!-- membership -->
-        <article
-          class="w-full h-[50vh] md:h-[30vh] sm:h-[50vh] bg-gray-300 flex flex-col items-center justify-center gap-28 md:gap-20 sm:gap-10"
-        >
-          <div
-            class="w-[85%] md:w-[90%] sm:w-[90%] h-full flex sm:flex-col sm:gap-2 sm:justify-center justify-between items-center"
-          >
-            <div class="flex flex-col items-start sm:items-center gap-7">
-              <div class="sm:text-center">
-                <h2 class="text-3xl sm:text-xl">MEMBERSHIP BENEFITS</h2>
-                <p class="text-sm sm:text-xs">
-                  무지개 맨션의 고객이 되어 회원 전용 혜택을 받아보세요.
-                </p>
-              </div>
-              <button
-                type="button"
-                class="p-3 text-white text-sm sm:text-xs bg-black-100 rounded-full"
-              >
-                DETAIL VIEW
-              </button>
-            </div>
-            <div>
-              <ul
-                class="flex gap-20 md:gap-4 sm:gap-8 items-center justify-around"
-              >
-                <li
-                  class="relative bg-membership-1 bg-no-repeat bg-contain w-40 h-40 md:w-28 md:h-28 sm:w-24 sm:h-24"
-                >
-                  <p
-                    class="absolute w-full -bottom-16 sm:-bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-sm sm:text-xs"
-                  >
-                    <span>무료배송 쿠폰</span><span>1종 지급</span>
-                  </p>
-                </li>
-                <li
-                  class="relative bg-membership-2 bg-no-repeat bg-contain w-40 h-40 md:w-28 md:h-28 sm:w-24 sm:h-24"
-                >
-                  <p
-                    class="absolute w-full -bottom-16 sm:-bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-sm sm:text-xs"
-                  >
-                    <span>첫 구매</span><span>2,000원 할인쿠폰</span>
-                  </p>
-                </li>
-                <li
-                  class="relative bg-membership-3 bg-no-repeat bg-contain w-40 h-40 md:w-28 md:h-28 sm:w-24 sm:h-24"
-                >
-                  <p
-                    class="absolute w-full -bottom-16 sm:-bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-sm sm:text-xs"
-                  >
-                    <span>프리미엄 비건</span><span>익스피리언스</span>
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article
-          class="w-full flex flex-col justify-center items-center h-[40vh] md:h-[30vh] sm:h-[30vh]"
-        >
-          <div class="flex flex-col items-center">
-            <span>@muzigae_mansion</span>
-            <h3>Instagram</h3>
-          </div>
-        </article>
-      </section>
-
-      <footer class="bg-black-100 w-full h-[40vh] sm:h-screen md:h-[60vh]">
-        <div
-          class="w-[90%] h-full py-10 flex md:flex-col sm:flex-col sm:gap-10 items-start justify-between m-auto text-white text-xs"
-        >
-          <div class="flex flex-col gap-10 md:gap-5 sm:gap-5 items-start">
-            <p class="bg-mm-logo bg-no-repeat bg-cover w-28 h-12"></p>
-            <p>Copyright &copy; 주식회사 엘씨엠코스메틱.All rights reserved.</p>
-            <select name="" id="" class="bg-black-100 border border-white p-4">
-              <option value="about">About</option>
-              <option value="privacy-policy">개인정보처리방침</option>
-              <option value="agreement">이용약관</option>
-              <option value="guide">이용안내</option>
-            </select>
-          </div>
-          <div class="flex flex-col gap-10 sm:gap-5 items-start">
-            <h3>Customer center</h3>
-            <div class="space-y-2">
-              <p>070 7714 5156</p>
-              <p>muzigae-mansion@icmcosmetic.com</p>
-              <p>MON - FRI : 9am-5pm</p>
-            </div>
-            <div class="space-y-2">
-              <p>기업은행 : 064-150459-01-010</p>
-              <p>예금주 : 엘씨엠코스메틱</p>
-            </div>
-          </div>
-          <div class="flex flex-col gap-10 sm:gap-5 items-start">
-            <h3>Company info</h3>
-            <div class="space-y-2">
-              <p>상호명 : 주식회사 엘씨엠코스메틱</p>
-              <p>대표 : 이승후</p>
-              <p>
-                주소 : 서울특별시 용산구 한강대로 69 (한강로2가)
-                용산푸르지오써밋 업무동 602호
-              </p>
-              <p>사업자 등록번호 : 304-88-0089</p>
-              <p>통신판매신고번호 : 제 2023-서울용산-1831호</p>
-            </div>
-          </div>
-          <div class="flex flex-col gap-10 sm:gap-5 items-start">
-            <h3>Follow us</h3>
-            <div
-              class="space-y-2 md:flex md:items-center md:space-x-2 md:space-y-0 sm:flex sm:items-center sm:space-x-2 sm:space-y-0"
+          <div>
+            <ul
+              class="flex gap-20 md:gap-4 sm:gap-8 items-center justify-around"
             >
-              <p>Instagram</p>
-              <p>Youtube</p>
-              <p>Smartstore</p>
-              <p>Facebook</p>
-            </div>
+              <li
+                class="relative bg-membership-1 bg-no-repeat bg-contain w-40 h-40 md:w-28 md:h-28 sm:w-24 sm:h-24"
+              >
+                <p
+                  class="absolute w-full -bottom-16 sm:-bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-sm sm:text-xs"
+                >
+                  <span>무료배송 쿠폰</span><span>1종 지급</span>
+                </p>
+              </li>
+              <li
+                class="relative bg-membership-2 bg-no-repeat bg-contain w-40 h-40 md:w-28 md:h-28 sm:w-24 sm:h-24"
+              >
+                <p
+                  class="absolute w-full -bottom-16 sm:-bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-sm sm:text-xs"
+                >
+                  <span>첫 구매</span><span>2,000원 할인쿠폰</span>
+                </p>
+              </li>
+              <li
+                class="relative bg-membership-3 bg-no-repeat bg-contain w-40 h-40 md:w-28 md:h-28 sm:w-24 sm:h-24"
+              >
+                <p
+                  class="absolute w-full -bottom-16 sm:-bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-sm sm:text-xs"
+                >
+                  <span>프리미엄 비건</span><span>익스피리언스</span>
+                </p>
+              </li>
+            </ul>
           </div>
         </div>
-      </footer>
-    </div>
+      </article>
+
+      <article
+        class="w-full flex flex-col justify-center items-center h-[40vh] md:h-[30vh] sm:h-[30vh]"
+      >
+        <div class="flex flex-col items-center">
+          <span>@muzigae_mansion</span>
+          <h3>Instagram</h3>
+        </div>
+      </article>
+    </section>
+
+    <footer class="bg-black-100 w-full h-[40vh] sm:h-screen md:h-[60vh]">
+      <div
+        class="w-[90%] h-full py-10 flex md:flex-col sm:flex-col sm:gap-10 items-start justify-between m-auto text-white text-xs"
+      >
+        <div class="flex flex-col gap-10 md:gap-5 sm:gap-5 items-start">
+          <p class="bg-mm-logo bg-no-repeat bg-cover w-28 h-12"></p>
+          <p>Copyright &copy; 주식회사 엘씨엠코스메틱.All rights reserved.</p>
+          <select name="" id="" class="bg-black-100 border border-white p-4">
+            <option value="about">About</option>
+            <option value="privacy-policy">개인정보처리방침</option>
+            <option value="agreement">이용약관</option>
+            <option value="guide">이용안내</option>
+          </select>
+        </div>
+        <div class="flex flex-col gap-10 sm:gap-5 items-start">
+          <h3>Customer center</h3>
+          <div class="space-y-2">
+            <p>070 7714 5156</p>
+            <p>muzigae-mansion@icmcosmetic.com</p>
+            <p>MON - FRI : 9am-5pm</p>
+          </div>
+          <div class="space-y-2">
+            <p>기업은행 : 064-150459-01-010</p>
+            <p>예금주 : 엘씨엠코스메틱</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-10 sm:gap-5 items-start">
+          <h3>Company info</h3>
+          <div class="space-y-2">
+            <p>상호명 : 주식회사 엘씨엠코스메틱</p>
+            <p>대표 : 이승후</p>
+            <p>
+              주소 : 서울특별시 용산구 한강대로 69 (한강로2가) 용산푸르지오써밋
+              업무동 602호
+            </p>
+            <p>사업자 등록번호 : 304-88-0089</p>
+            <p>통신판매신고번호 : 제 2023-서울용산-1831호</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-10 sm:gap-5 items-start">
+          <h3>Follow us</h3>
+          <div
+            class="space-y-2 md:flex md:items-center md:space-x-2 md:space-y-0 sm:flex sm:items-center sm:space-x-2 sm:space-y-0"
+          >
+            <p>Instagram</p>
+            <p>Youtube</p>
+            <p>Smartstore</p>
+            <p>Facebook</p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

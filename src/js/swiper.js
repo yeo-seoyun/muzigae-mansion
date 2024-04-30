@@ -27,10 +27,37 @@ const mySwiper = new Swiper(".main-Swiper", {
   },
 });
 
-document.addEventListener("DOMContentLoaded", async () => {
-  await loadCollections();
-  await loadBestItems();
-});
+async function initPage() {
+  try {
+    // 데이터 로드 함수
+    await loadCollections();
+    await loadBestItems();
+
+    document
+      .querySelectorAll(".collection-Swiper .swiper-slide img")
+      .forEach((img, index) => {
+        gsap.from(img, {
+          y: () => -0.1 * img.offsetHeight,
+          ease: "sine.inOut",
+          duration: 2,
+          delay: 0.2 * index,
+          repeat: -1,
+          yoyo: true,
+          scrollTrigger: {
+            trigger: img,
+            start: "top bottom-=200",
+            end: "bottom top+=200",
+            toggleActions: "restart pause resume pause",
+            scrub: 1,
+          },
+        });
+      });
+  } catch (error) {
+    console.error("Initialization failed:", error);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", initPage);
 
 async function loadCollections() {
   try {
@@ -53,34 +80,15 @@ async function loadCollections() {
       )
       .join("");
 
-    records.forEach((item, index) => {
-      const img = swiperContainer.querySelectorAll("img")[index];
-      gsap.to(img, {
-        y: () => -0.1 * img.offsetHeight,
-        ease: "sine.inOut",
-        duration: 2,
-        delay: 0.2 * index,
-        repeat: -1,
-        yoyo: true,
-        scrollTrigger: {
-          trigger: img,
-          start: "top bottom-=200",
-          end: "bottom top+=200",
-          toggleActions: "restart pause resume pause",
-          scrub: 1,
-        },
-      });
-    });
-
     new Swiper(".collection-Swiper", {
-      slidesPerView: 6,
+      slidesPerView: 5,
       spaceBetween: 10,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
       breakpoints: {
-        1080: { slidesPerView: 6 },
+        1080: { slidesPerView: 5 },
         768: { slidesPerView: 3 },
         320: { slidesPerView: 1 },
       },
