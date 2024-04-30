@@ -19,14 +19,7 @@ document.addEventListener("scroll", function () {
 });
 
 $(document).ready(function () {
-  function toggleModal() {
-    $("#category-modal").toggleClass("hidden");
-  }
-  $("#menu-button").click(function () {
-    toggleModal();
-  });
-
-  $("#category-modal .menu-close").click(function () {
+  $("#menu-open").click(function () {
     toggleModal();
   });
 });
