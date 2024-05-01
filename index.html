@@ -83,6 +83,35 @@
       </div>
     </header>
 
+    <dialog
+      id="myDialog"
+      class="w-[380px] h-[720px] flex flex-col items-center justify-center overflow-hidden shadow-default"
+    >
+      <img
+        src="/src/assets/fitting-blush.jpg"
+        alt="피팅블러셔"
+        class="w-full h-full object-contain"
+      />
+      <form method="dialog" class="w-full flex py-3 text-sm">
+        <button
+          type="button"
+          value="cancel"
+          class="todayButton flex-1 hover:font-bold transition-all"
+        >
+          오늘 하루 안보기
+        </button>
+
+        <button
+          type="button"
+          value="confirm"
+          id="closeButton"
+          class="flex-1 hover:font-bold transition-all"
+        >
+          닫기
+        </button>
+      </form>
+    </dialog>
+
     <section class="w-full">
       <!-- main -->
       <article class="main w-full h-screen">

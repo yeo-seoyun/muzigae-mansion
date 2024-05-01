@@ -24,12 +24,15 @@ export default {
         },
       },
     },
+    boxShadow: {
+      default: "0px 2px 15px -2px rgba(0, 0, 0, 0.09)",
+    },
     backgroundImage: {
       "mm-logo": "url('/assets/cm_logo_white_1.svg')",
       "mm-logo-black": "url('/assets/cm_logo_black_1.svg')",
-      "main-slide-1": "url('/src/assets/9edf775855b793faf29a232296dff4b0.jpg')",
-      "main-slide-2": "url('/src/assets/8e3443c56ff34d62d34d24beb5c27b62.jpg')",
-      "main-slide-3": "url('/src/assets/82a06cea427f491c3d6e421824d6aebf.jpg')",
+      "main-slide-1": "url('/src/assets/2cbdc335c379f94e7e7969ed6b08101d.jpg')",
+      "main-slide-2": "url('/src/assets/a624623de99152a98a469e912a155fe8.jpg')",
+      "main-slide-3": "url('/src/assets/cf7f6b4169ac4d81038a94bbaf45f768.jpg')",
       "main-slide-sm1":
         "url('/src/assets/d2ba27ae1dce5496d71887b39eb456b4.jpg')",
       "main-slide-sm2":
