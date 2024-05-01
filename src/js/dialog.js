@@ -14,14 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  // 다이얼로그 표시 로직
   if (dialog && typeof dialog.showModal === "function") {
     dialog.showModal();
   } else {
     dialog.setAttribute("open", true);
   }
 
-  // 다이얼로그 배경 클릭시 닫기
   dialog.addEventListener("click", (event) => {
     if (event.target === dialog) {
       dialog.close();
