@@ -1,6 +1,3 @@
-import $ from "jquery";
-import { toggleModal } from "./categoryModal.js";
-
 document.addEventListener("scroll", function () {
   const header = document.getElementById("header");
   const logo = document.querySelector(".logo");
@@ -16,10 +13,4 @@ document.addEventListener("scroll", function () {
     header.classList.remove("bg-white");
     logo.style.backgroundImage = "url('/assets/cm_logo_white_1.svg')";
   }
-});
-
-$(document).ready(function () {
-  $("#menu-open").click(function () {
-    toggleModal();
-  });
 });

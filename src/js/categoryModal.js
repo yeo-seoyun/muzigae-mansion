@@ -1,25 +1,32 @@
-import $ from "jquery";
 import { gsap } from "gsap";
 
-const modal = $("#category-modal");
-const tl = gsap.timeline({ paused: true });
+document.addEventListener("DOMContentLoaded", function () {
+  const openBtn = document.getElementById("menu-open");
+  const closeBtn = document.getElementById("menu-close");
+  const modal = document.getElementById("category-modal");
 
-tl.fromTo(
-  modal,
-  { x: "-100%", autoAlpha: 0 },
-  { duration: 0.5, x: "0%", autoAlpha: 1, ease: "power2.out" }
-);
+  console.log("Open Button:", openBtn);
+  console.log("Close Button:", closeBtn);
+  console.log("Modal:", modal);
 
-export function toggleModal() {
-  if (tl.isActive()) {
+  if (!openBtn || !closeBtn || !modal) {
     return;
   }
-  tl.reversed() ? tl.play() : tl.reverse();
-}
 
-$("#menu-open").click(function () {
-  toggleModal();
-});
-$("#menu-close").click(function () {
-  toggleModal();
+  const tl = gsap.timeline({ paused: true });
+
+  tl.to(modal, {
+    x: "0%",
+    autoAlpha: 1,
+    duration: 0.5,
+    ease: "power2.out",
+  });
+
+  openBtn.addEventListener("click", function () {
+    tl.play();
+  });
+
+  closeBtn.addEventListener("click", function () {
+    tl.reverse();
+  });
 });
