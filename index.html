@@ -20,6 +20,41 @@
     <script type="module" src="/main.js"></script>
   </head>
   <body>
+    <dialog
+      id="myDialog"
+      class="w-[380px] h-[720px] sm:w-[280px] sm:h-[550px] overflow-hidden shadow-default"
+    >
+      <form
+        method="dialog"
+        class="w-full h-full flex flex-col justify-between items-center text-sm"
+      >
+        <img
+          src="/src/assets/fitting-blush.jpg"
+          alt="피팅블러셔"
+          class="w-full h-full object-contain"
+        />
+        <div class="w-full h-full flex items-cente">
+          <button
+            type="button"
+            value="cancel"
+            id="todayButton"
+            class="flex-1 hover:font-bold transition-all"
+          >
+            하루동안 보지 않기
+          </button>
+
+          <button
+            type="button"
+            value="confirm"
+            id="closeButton"
+            class="flex-1 hover:font-bold transition-all"
+          >
+            닫기
+          </button>
+        </div>
+      </form>
+    </dialog>
+
     <header
       id="header"
       class="fixed top-0 z-40 w-full h-16 flex items-center px-20 sm:px-4 md:px-4 text-sm"
@@ -82,41 +117,6 @@
         </div>
       </div>
     </header>
-
-    <dialog
-      id="myDialog"
-      class="w-[380px] h-[720px] sm:w-[280px] sm:h-[550px] overflow-hidden shadow-default"
-    >
-      <form
-        method="dialog"
-        class="w-full h-full flex flex-col justify-between items-center text-sm"
-      >
-        <img
-          src="/src/assets/fitting-blush.jpg"
-          alt="피팅블러셔"
-          class="w-full h-full object-contain"
-        />
-        <div class="w-full h-full flex items-cente">
-          <button
-            type="button"
-            value="cancel"
-            id="todayButton"
-            class="flex-1 hover:font-bold transition-all"
-          >
-            하루동안 보지 않기
-          </button>
-
-          <button
-            type="button"
-            value="confirm"
-            id="closeButton"
-            class="flex-1 hover:font-bold transition-all"
-          >
-            닫기
-          </button>
-        </div>
-      </form>
-    </dialog>
 
     <section class="w-full">
       <!-- main -->
