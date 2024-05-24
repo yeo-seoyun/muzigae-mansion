@@ -33,25 +33,23 @@ async function initPage() {
     await loadCollections();
     await loadBestItems();
 
-    document
-      .querySelectorAll(".collection-Swiper .swiper-slide img")
-      .forEach((img, index) => {
-        gsap.from(img, {
-          y: () => -0.1 * img.offsetHeight,
-          ease: "sine.inOut",
-          duration: 2,
-          delay: 0.2 * index,
-          repeat: -1,
-          yoyo: true,
-          scrollTrigger: {
-            trigger: img,
-            start: "top bottom-=200",
-            end: "bottom top+=200",
-            toggleActions: "restart pause resume pause",
-            scrub: 1,
-          },
-        });
+    document.querySelectorAll(".collection-Swiper").forEach((img, index) => {
+      gsap.from(img, {
+        y: () => -0.1 * img.offsetHeight,
+        ease: "sine.inOut",
+        duration: 2,
+        delay: 0.2 * index,
+        repeat: -1,
+        yoyo: true,
+        scrollTrigger: {
+          trigger: img,
+          start: "top bottom-=50",
+          end: "bottom top+=50",
+          toggleActions: "restart pause resume pause",
+          scrub: 1,
+        },
       });
+    });
   } catch (error) {
     console.error("Initialization failed:", error);
   }
